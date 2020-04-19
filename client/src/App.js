@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Opp from './classcomponent'
+// import { response } from "express";
 
 function App() {
+
+
+  const [players, setplayers] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/api/players")
+      .then((response) => response.json())
+      .then((soccarwomen) => {
+        setplayers(soccarwomen);
+      });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div data-testid="itisindeed" className="App">
+      
+      <Opp></Opp>
+      {players.map((players, index) => (
+        <div key={index} className="playnameactual">
+          <div  data-testid="itdo" className='pnampad'>{players.name}</div>
+        </div>
+      ))}
     </div>
   );
 }
+
+
 
 export default App;

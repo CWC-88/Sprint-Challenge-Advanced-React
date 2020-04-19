@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 .App-logo {
@@ -30,4 +32,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.playernameactual{
+ 
+  float: left;
+
+}
+.playernumactual{
+  float: right;
+}
+.pnampad{
+  padding: 8px;
+ 
+
 }
