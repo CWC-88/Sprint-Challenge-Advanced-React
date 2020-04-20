@@ -38,12 +38,17 @@
  
   float: left;
 
+
 }
 .playernumactual{
   float: right;
 }
 .pnampad{
   padding: 8px;
- 
+  color: red;
 
+}
+
+.itemse{
+  color: blue;
 }
