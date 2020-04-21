@@ -49,23 +49,27 @@ expect(cardName.textContent).toBeTruthy();
 
 })
 
-// test('are names red ', async () => {
-//   const {baseElement} = render(<App/>)
-//   await waitForDomChange();
-// const Namecolor = baseElement.querySelector('.pnampad')
+test('are num blue ', async () => {
+  const {baseElement} = render(<App/>)
+  await waitForDomChange();
+const Namecolor = baseElement.querySelector('.itemse')
 
-// expect(Namecolor).toBeInTheDocument() 
+expect(Namecolor).toBeInTheDocument() 
 
-// expect(Namecolor).toHaveStyle({color: red})
+expect(Namecolor).toHaveStyle(`
+color: blue
+`)
+})
 
-// })
 
-
-// test("namesred", async () => {
+test("namesred", async () => {
  
 
-//     const { getByTestId } = render(<App />);
-//     await waitForDomChange();
-//     expect(getByTestId("itdo")).toHaveStyleRule("itdo",'red');
+    const { getAllByTestId } = render(<App />);
+    await waitForDomChange();
+    const text = getAllByTestId("itdo")
+    expect(text[0]).toHaveStyle(`
+      color: red
+    `);
 
-// });
+});

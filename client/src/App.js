@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Opp from './classcomponent'
-import PPp from './hooook'
+import PlayerSearches from './PlayerSearches'
+import WindowWidethDisplay from './useWindowWidth'
 
 // import { response } from "express";
 
@@ -19,11 +19,11 @@ function App() {
 
   return (
     <div data-testid="itisindeed" className="App">
-      <PPp></PPp>
-      <Opp></Opp>
+      <WindowWidethDisplay></WindowWidethDisplay>
+      <PlayerSearches></PlayerSearches>
       {players.map((players, index) => (
         <div  data-testid="red" key={index} className="playnameactual">
-          <div  data-testid="itdo" className='pnampad'>{players.name}</div>
+          <div  data-testid="itdo" style={{color:'red'}}>{players.name}</div>
         </div>
       ))}
     </div>
