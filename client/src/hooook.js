@@ -16,15 +16,7 @@ function useWindowWidth() {
   return width;
 }
 
-function MyComponent() {
-  const width = useWindowWidth();
-  return <span>window width {width}</span>;
-}
 
-function PPp() {
-  return <MyComponent />;
-}
-export default PPp
-
+export default useWindowWidth
 
 
