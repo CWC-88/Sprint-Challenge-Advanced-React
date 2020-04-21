@@ -62,7 +62,7 @@ class Opp extends React.Component {
         <h1 className="headers">Hello soccarettes!</h1>
 
         
-        <div className="playernumactual">
+        <div data-testid="numsfordays" className="playernumactual">
           {this.state.searchdata.map(item =>{
             return(
                 <p className='itemse'>{item.searches}</p>
